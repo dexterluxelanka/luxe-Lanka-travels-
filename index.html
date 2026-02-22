@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dexter Luxe Lanka Tours</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f6f9;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#0d1b2a;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+header h1{
+  font-size:28px;
+  font-weight:700;
+}
+
+header p{
+  font-size:14px;
+  margin-top:5px;
+}
+
+/* HERO SLIDER */
+.slider{
+  position:relative;
+  height:80vh;
+  overflow:hidden;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.active{
+  opacity:1;
+}
+
+/* HERO TEXT */
+.hero-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:white;
+  text-align:center;
+  background:rgba(0,0,0,0.5);
+  padding:25px 40px;
+  border-radius:8px;
+}
+
+.hero-text h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.hero-text p{
+  font-size:16px;
+}
+
+/* ARROWS */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:30px;
+  color:white;
+  background:rgba(0,0,0,0.4);
+  padding:10px 15px;
+  cursor:pointer;
+  border-radius:50%;
+}
+
+.arrow.left{ left:20px; }
+.arrow.right{ right:20px; }
+
+.arrow:hover{
+  background:#000;
+}
+
+/* SECTION */
+.section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.section h2{
+  font-size:26px;
+  margin-bottom:20px;
+  color:#0d1b2a;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  padding:20px;
+}
+
+.gallery img{
+  width:100%;
+  height:170px;
+  object-fit:contain;
+  background:white;
+  padding:5px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  transition:transform 0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+  background:#0d1b2a;
+  color:white;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.contact a{
+  color:#f4c430;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.social{
+  margin-top:20px;
+}
+
+.social a{
+  margin:0 10px;
+  color:#f4c430;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp:hover{
+  background:#1ebe5d;
+}
+
+/* FOOTER */
+footer{
+  background:#0d1b2a;
+  color:white;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-text h2{ font-size:22px; }
+  .hero-text p{ font-size:14px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Dexter Luxe Lanka Tours</h1>
+  <p>Private Tours | Airport Transfers | Day Trips Across Sri Lanka</p>
+</header>
+
+<!-- SLIDER -->
+<div class="slider" id="slider">
+
+  <div class="slide active"><img src="cover.jpg"></div>
+  <div class="slide"><img src="tour1.jpg"></div>
+  <div class="slide"><img src="tour2.jpg"></div>
+  <div class="slide"><img src="tour3.jpg"></div>
+  <div class="slide"><img src="tour4.jpg"></div>
+  <div class="slide"><img src="tour5.jpg"></div>
+  <div class="slide"><img src="tour6.jpg"></div>
+  <div class="slide"><img src="tour7.jpg"></div>
+  <div class="slide"><img src="tour8.jpg"></div>
+
+  <div class="hero-text">
+    <h2>Explore Beautiful Sri Lanka</h2>
+    <p>Comfort • Safety • Trusted Private Tours</p>
+  </div>
+
+  <div class="arrow left" onclick="prevSlide()">❮</div>
+  <div class="arrow right" onclick="nextSlide()">❯</div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h2>Travel in Comfort & Style</h2>
+  <p>Discover wildlife, hill country, beaches, and cultural heritage with a trusted private tour service in Sri Lanka.</p>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+  <h2>Tour Highlights</h2>
+  <div class="gallery">
+    <img src="tour1.jpg">
+    <img src="tour2.jpg">
+    <img src="tour3.jpg">
+    <img src="tour4.jpg">
+    <img src="tour5.jpg">
+    <img src="tour6.jpg">
+    <img src="tour7.jpg">
+    <img src="tour8.jpg">
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+  <h2>Contact Me</h2>
+  <p>WhatsApp: <a href="https://wa.me/94788862949">+94 78 886 2949</a></p>
+
+  <div class="social">
+    <p>Follow Us:</p>
+    <a href="https://www.facebook.com/share/1E46Yec83q/?mibextid=wwXIfr" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/dexterluxelanka?igsh=a2gzdGEzbXhmYXR0&utm_source=qr" target="_blank">Instagram</a>
+  </div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/94788862949">Chat on WhatsApp</a>
+
+<footer>
+© 2026 Dexter Luxe Lanka Tours | All Rights Reserved
+</footer>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+let interval = setInterval(nextSlide, 4000);
+
+function showSlide(i){
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+function nextSlide(){
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide(){
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+document.getElementById('slider').addEventListener('mouseover', () => clearInterval(interval));
+document.getElementById('slider').addEventListener('mouseout', () => interval = setInterval(nextSlide, 4000));
+</script>
+
+</body>
+</html>
